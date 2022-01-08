@@ -10,10 +10,111 @@
                 background-position: center;
                 font-family: sans-serif;
                 }
+            .dropbtn {
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                padding: 16px;
+                font-size: 16px;
+                font-family: "Taaliyan";
+                border: none;
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #ddd;}
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {display: block;}
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {background-color: rgb(192, 191, 191);}
         </style>
     </head>
     <body>
-        <button class="button">Home</button> 
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Activity</span>
+              </a>
+              <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a class="inline-flex items-center border-0 mr-5 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0" href = "./message_e.html" > Home</a>
+                
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 mr-5 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Absent Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_absent.html">Classes 3 - 5</a>
+                      <a href="./6-8_absent.html">Classes 6 - 8</a>
+                      <a href="./9-12_absent.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Occupied Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_occupied.html">Classes 3 - 5</a>
+                      <a href="./6-8_occupied.html">Classes 6 - 8</a>
+                      <a href="./9-12_occupied.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Free Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_free.html">Classes 3 - 5</a>
+                      <a href="./6-8_free.html">Classes 6 - 8</a>
+                      <a href="./9-12_free.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+              </nav>     
+              <div class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none">
+                <h3>
+                  Admin
+                  <br>
+                  <center>Logged in</center>
+                </h3>
+                <svg height = "50" width = "10">
+                </svg>
+                <svg height = "50" width = "10">
+                  <line x1="0" y1="0" x2="0" y2="50" style="stroke:rgb(46, 46, 46);stroke-width:4"/>
+                </svg>
+                <a href = "./SIGN_IN.html">
+                  <button class="border-0 py-1 px-3 hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">
+                    Log Out
+                    <center>
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </center>
+                    
+                  </button>
+                </a>
+              </div>             
+        </div>
+        </header> 
         <button class="button">All the teachers</button>
         <button class="button">Teachers of grade 3</button>
         <button class="button">Teachers of grade 4</button>
