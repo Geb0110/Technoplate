@@ -7,9 +7,14 @@
   <link rel="stylesheet" type = "text/css" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
   <title>Document</title>
   <style>
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {display: block;}
-    </style>
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+     }
+     /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {display: block;}
+  </style>
 </head>
 <body>            
     <link rel="stylesheet" type="text/css" href="main.css" media="main">
