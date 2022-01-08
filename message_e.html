@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type = "text/css" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+  <title>Document</title>
+  <style>
+    .dropbtn {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        font-family: "Taaliyan";
+        border: none;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: rgb(192, 191, 191);}
+    </style>
+</head>
+<body>            
+    <link rel="stylesheet" type="text/css" href="main.css" media="main">
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Activity</span>
+              </a>
+              <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a class="inline-flex items-center border-0 mr-5 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0" href = "./message_e.html" > Home</a>
+                
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 mr-5 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Absent Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_absent.html">Classes 3 - 5</a>
+                      <a href="./6-8_absent.html">Classes 6 - 8</a>
+                      <a href="./9-12_absent.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Occupied Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_occupied.html">Classes 3 - 5</a>
+                      <a href="./6-8_occupied.html">Classes 6 - 8</a>
+                      <a href="./9-12_occupied.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+                <div class = "dropdown">
+                  <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">Free Teachers</button>
+                  <div class="dropdown-content">
+                      <a href="./3-5_free.html">Classes 3 - 5</a>
+                      <a href="./6-8_free.html">Classes 6 - 8</a>
+                      <a href="./9-12_free.html">Classes 9 - 12</a>
+                  </div>
+                </div>
+              </nav>     
+              <div class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none">
+                <h3>
+                  Radhika Ranganathan
+                  <br>
+                  <center>Logged in</center>
+                </h3>
+                <svg height = "50" width = "10">
+                </svg>
+                <svg height = "50" width = "10">
+                  <line x1="0" y1="0" x2="0" y2="50" style="stroke:rgb(46, 46, 46);stroke-width:4"/>
+                </svg>
+                <a href = "./SIGN_IN.html">
+                  <button class="border-0 py-1 px-3 hover:bg-gray-200 text-gray-900 rounded text-base mt-4 md:mt-0">
+                    Log Out
+                    <center>
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </center>
+                    
+                  </button>
+                </a>
+              </div>             
+        </div>
+        </header>
+          <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+            <div class="flex flex-col mb-10 lg:items-start items-center">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3 text-decoration = underline "> Absent:</h2>
+                <form action = "./Trial.php" method = "post">
+                <div>
+                  <input type="radio" id="Full-day" name = "Absence-type">
+                  <label for="Full-day">Full Day</label>
+                  <br>
+                  <div id = "Full Day">
+                    <br>
+                    <input type="radio" id="Full-day-today" name = "Full-Day-Options">
+                    <label for="Full-day-today"> Today </label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input type="radio" id="Full-day-dayset" name = "Full-Day-Options">
+                    <label for="Full-day-dayset"> Particular Days</label>
+                    <div id = "Particular Days"><br>
+                      Choose Start Date <input class = "ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg" type = "date" id="Full-day-date-start"><br><br>
+                      Choose End Date <input class = "ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg" type = "date" id="Full-day-date-end">
+                    </div>
+                    <label for = "Full-day-date">  </label>               
+                  </div>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" id="Half-day" name = "Absence-type">
+                  <label for="Half-day">Half Day</label>              
+                  <br>
+                  <div id = "Half Day">
+                    Choose Date <input class = "ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg" type = "date" id="Half-day-date">
+                    <label for = "Half-day-date">  </label>
+                  </div>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" id="Particular-period" name = "Absence-type">
+                  <label for="Particular-period">Particular Periods</label>
+                  <br>
+                  <div id = "Particular Period">
+                    <input type="checkbox" id="Select1">
+                    <label for="Select1">1</label>
+                    <input type="checkbox" id="Select2">
+                    <label for="Select2"> 2</label>
+                    <input type="checkbox" id="Select3">
+                    <label for="Selecect3">3</label>
+                    <input type="checkbox" id="Select4">
+                    <label for="Select4">4</label>
+                    <input type="checkbox" id="Select5">
+                    <label for="Select5">5</label>
+                    <input type="checkbox" id="Select6">
+                    <label for="Select6">6</label>
+                    <input type="checkbox" id="Select7">
+                    <label for="Select7">7</label>
+                    <input type="checkbox" id="Select8">
+                    <label for="Select8">8</label>
+                  </div>
+                </div>
+                </form>
+                <br>
+                <div class="flex justify-center">
+                  <a href = "./Trial.php"><button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Submit</button></a>
+                  <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Reset</button>
+                </div>
+            
+    
+    </body>
+    <script>
+      var divFullDay = document.getElementById("Full Day");
+      divFullDay.style.display = "none";
+      var divHalfDay = document.getElementById("Half Day");
+      divHalfDay.style.display = "none";
+      var divPartPer = document.getElementById("Particular Period");
+      divPartPer.style.display = "none";
+      var divPartDay = document.getElementById("Particular Days");
+      divPartDay.style.display = "none";
+    
+      var radioFD = document.getElementById("Full-day");
+      radioFD.checked = true;
+      var radioFDT = document.getElementById("Full-day-today");
+      radioFDT.checked = true;
+      var radioFDPD = document.getElementById("Full-day-dayset");
+      var radioHD = document.getElementById("Half-day");
+      var radioPP = document.getElementById("Particular-period");
+    
+      var FDChecked;
+      var HDChecked;
+      var PPChecked;
+      var FDTChecked;
+      setInterval(function(){
+        FDChecked = radioFD.checked;
+        HDChecked = radioHD.checked;
+        PPChecked = radioPP.checked;
+        FDTChecked = radioFDT.checked;
+        if(FDChecked){
+          divFullDay.style.display = "inline";
+        }
+        if(!(FDChecked)){
+          divFullDay.style.display = "none";
+        }
+        if(HDChecked){
+          divHalfDay.style.display = "inline";
+        }
+        if(!(HDChecked)){
+          divHalfDay.style.display = "none";
+        }
+        if(PPChecked){
+          divPartPer.style.display = "inline";
+        }
+        if(!(PPChecked)){
+          divPartPer.style.display = "none";
+        }
+        if(FDTChecked){
+          divPartDay.style.display = "none";
+        }
+        if(!(FDTChecked)){
+          divPartDay.style.display = "inline";
+        }
+        }, 50);
+      
+    </script>
+</html>
